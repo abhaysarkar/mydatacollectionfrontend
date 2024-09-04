@@ -141,3 +141,48 @@
   user-select: none; 
   cursor: default; 
 }
+
+
+/* Base styles for all devices */
+.form-select {
+  border: 1px solid #ced4da;
+  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #495057;
+  background-color: #fff;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"%3E%3Cpath fill="none" stroke="%23333" d="M2 0L0 2h4zm0 5L0 3h4z"/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 8px 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Specific styles for mobile devices */
+@media (max-width: 576px) {
+  .form-select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+  }
+
+  /* Forcing select to look consistent on mobile */
+  .form-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: none;
+  }
+
+  /* Custom arrow icon for mobile dropdown */
+  .form-select:after {
+    content: '▼';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+}
