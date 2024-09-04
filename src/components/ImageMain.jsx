@@ -321,7 +321,7 @@ const ImageMain = () => {
 
   // Fetch medical field names
   useEffect(() => {
-    axios.get('http://localhost:8080/apii/medical-fields/names')
+    axios.get('https://datacollection-backend-eb040f587829.herokuapp.com/apii/medical-fields/names')
       .then(response => {
         setMedicalFields(response.data.map((name, index) => ({ id: index + 1, name })));
         setLoading(false);
@@ -335,7 +335,7 @@ const ImageMain = () => {
   // Fetch sub-departments based on selected medical field
   useEffect(() => {
     if (selectedFieldId) {
-      axios.get(`http://localhost:8080/apii/medical-fields/${selectedFieldId}/sub-departments`)
+      axios.get(`https://datacollection-backend-eb040f587829.herokuapp.com/apii/medical-fields/${selectedFieldId}/sub-departments`)
         .then(response => {
           setSubDepartments(response.data);
           setSelectedSubDeptId('');
@@ -348,7 +348,7 @@ const ImageMain = () => {
   }, [selectedFieldId]);
 
   const getAgain = () => {
-    axios.get('http://localhost:8080/apii/get-all-read-status')
+    axios.get('https://datacollection-backend-eb040f587829.herokuapp.com/apii/get-all-read-status')
       .then(response => {
         const readStatusData = response.data;
         const readSubDepts = new Set();
@@ -417,7 +417,7 @@ const ImageMain = () => {
       read: true,
     };
 
-    axios.post('http://localhost:8080/apii/mark-read', data)
+    axios.post('https://datacollection-backend-eb040f587829.herokuapp.com/apii/mark-read', data)
       .then(response => {
         setReadSubDepartments(prev => new Set(prev).add(`${medicalFieldId}-${subDeptId}`));
       })
