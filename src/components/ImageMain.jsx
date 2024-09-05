@@ -4,7 +4,7 @@ import { useSwipeable } from 'react-swipeable';
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import Loader from './Loader';
-import AudioRecordingComponent from './AudioRecordingComponent';
+import FileUpload from './FileUpload';
 import './MainPage.css';
 
 
