@@ -180,7 +180,7 @@ const ImageMain = () => {
         <Loader />
       ) : (
         <>
-{/*           <label className='email-label'>Your data will be saved to this Account</label>
+{/*           <label className='email-label'>Your data will be saved to this Account</label> */}
           <input
             type="email"
             value={email}
@@ -188,7 +188,7 @@ const ImageMain = () => {
             className="input-field"
             disabled
             required
-          /> */}
+          />
           <div className="d-flex align-items-center mb-3">
             <div className="me-3" style={{ flex: 1 }}>
               <label htmlFor="medical-field-select" className="form-label">Select Medical Field:</label>
