@@ -180,14 +180,14 @@ const ImageMain = () => {
         <Loader />
       ) : (
         <>
-          <label className='email-label'>Your data will be saved to this Account</label>
+{/*           <label className='email-label'>Your data will be saved to this Account</label>
           <input
             type="email"
             value={email}
             placeholder="Enter your email"
             className="input-field"
             disabled
-            required
+            required */}
           />
           <div className="d-flex align-items-center mb-3">
             <div className="me-3" style={{ flex: 1 }}>
