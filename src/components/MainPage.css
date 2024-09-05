@@ -160,29 +160,3 @@
   -moz-appearance: none;
 }
 
-/* Specific styles for mobile devices */
-@media (max-width: 576px) {
-  .form-select {
-    padding: 0.5rem;
-    font-size: 1rem;
-    border-radius: 0.25rem;
-  }
-
-  /* Forcing select to look consistent on mobile */
-  .form-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-image: none;
-  }
-
-  /* Custom arrow icon for mobile dropdown */
-  .form-select:after {
-    content: '▼';
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-  }
-}
