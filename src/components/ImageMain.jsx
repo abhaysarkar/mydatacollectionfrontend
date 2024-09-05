@@ -275,8 +275,7 @@ const ImageMain = () => {
               </div> */}
 
 
-              {/* <AudioRecordingComponent email={email} medicalField={selectedField?.name} subDepartment={selectedSubDept?.name} markAsReadHelper={markAsReadHelper}/> */}
-
+              <FileUpload email={email} medicalField={selectedField?.name} subDepartment={selectedSubDept?.name} markAsReadHelper={markAsReadHelper} />
 
             </div>
           )}
